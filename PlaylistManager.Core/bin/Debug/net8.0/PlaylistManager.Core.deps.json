@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PlaylistManager.Core/1.0.0": {
+        "dependencies": {
+          "PlaylistManager.Shared": "1.0.0"
+        },
+        "runtime": {
+          "PlaylistManager.Core.dll": {}
+        }
+      },
+      "PlaylistManager.Shared/1.0.0": {
+        "runtime": {
+          "PlaylistManager.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PlaylistManager.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PlaylistManager.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

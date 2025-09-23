@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PlaylistManager.Core\PlaylistManager.Core.csproj" />
+    <ProjectReference Include="..\PlaylistManager.Service\PlaylistManager.Service.csproj" />
+    <ProjectReference Include="..\PlaylistManager.Shared\PlaylistManager.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,26 @@
+C:\Users\Admin\Desktop\PlaylistManager.Core\bin\Debug\net8.0\PlaylistManager.Core.deps.json
+C:\Users\Admin\Desktop\PlaylistManager.Core\bin\Debug\net8.0\PlaylistManager.Core.dll
+C:\Users\Admin\Desktop\PlaylistManager.Core\bin\Debug\net8.0\PlaylistManager.Core.pdb
+C:\Users\Admin\Desktop\PlaylistManager.Core\obj\Debug\net8.0\PlaylistManager.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\PlaylistManager.Core\obj\Debug\net8.0\PlaylistManager.Core.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\PlaylistManager.Core\obj\Debug\net8.0\PlaylistManager.Core.AssemblyInfo.cs
+C:\Users\Admin\Desktop\PlaylistManager.Core\obj\Debug\net8.0\PlaylistManager.Core.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\PlaylistManager.Core\obj\Debug\net8.0\PlaylistManager.Core.dll
+C:\Users\Admin\Desktop\PlaylistManager.Core\obj\Debug\net8.0\refint\PlaylistManager.Core.dll
+C:\Users\Admin\Desktop\PlaylistManager.Core\obj\Debug\net8.0\PlaylistManager.Core.pdb
+C:\Users\Admin\Desktop\PlaylistManager.Core\obj\Debug\net8.0\ref\PlaylistManager.Core.dll
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Core\bin\Debug\net8.0\PlaylistManager.Core.deps.json
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Core\bin\Debug\net8.0\PlaylistManager.Core.dll
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Core\bin\Debug\net8.0\PlaylistManager.Core.pdb
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Core\bin\Debug\net8.0\PlaylistManager.Shared.dll
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Core\bin\Debug\net8.0\PlaylistManager.Shared.pdb
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Core\obj\Debug\net8.0\PlaylistManager.Core.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Core\obj\Debug\net8.0\PlaylistManager.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Core\obj\Debug\net8.0\PlaylistManager.Core.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Core\obj\Debug\net8.0\PlaylistManager.Core.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Core\obj\Debug\net8.0\PlaylistManager.Core.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Core\obj\Debug\net8.0\Playlist.1BC456D3.Up2Date
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Core\obj\Debug\net8.0\PlaylistManager.Core.dll
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Core\obj\Debug\net8.0\refint\PlaylistManager.Core.dll
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Core\obj\Debug\net8.0\PlaylistManager.Core.pdb
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Core\obj\Debug\net8.0\ref\PlaylistManager.Core.dll
