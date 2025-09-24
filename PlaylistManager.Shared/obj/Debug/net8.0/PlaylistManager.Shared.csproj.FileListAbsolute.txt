@@ -20,3 +20,4 @@ C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Shared\obj\Debug\net8.0\
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Shared\obj\Debug\net8.0\refint\PlaylistManager.Shared.dll
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Shared\obj\Debug\net8.0\PlaylistManager.Shared.pdb
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Shared\obj\Debug\net8.0\ref\PlaylistManager.Shared.dll
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Shared\obj\Debug\net8.0\PlaylistManager.Shared.sourcelink.json

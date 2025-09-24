@@ -19,3 +19,4 @@ C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Service\obj\Debug\net8.0
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Service\obj\Debug\net8.0\refint\PlaylistManager.Service.dll
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Service\obj\Debug\net8.0\PlaylistManager.Service.pdb
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Service\obj\Debug\net8.0\ref\PlaylistManager.Service.dll
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.Service\obj\Debug\net8.0\PlaylistManager.Service.sourcelink.json

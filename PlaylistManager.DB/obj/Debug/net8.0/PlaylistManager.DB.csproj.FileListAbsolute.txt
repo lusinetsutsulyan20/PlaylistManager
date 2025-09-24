@@ -34,3 +34,4 @@ C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\refi
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\PlaylistManager.DB.pdb
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\PlaylistManager.DB.genruntimeconfig.cache
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\ref\PlaylistManager.DB.dll
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\PlaylistManager.DB.sourcelink.json

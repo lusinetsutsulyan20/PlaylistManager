@@ -17,3 +17,4 @@ C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DAL\obj\Debug\net8.0\Pla
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DAL\obj\Debug\net8.0\refint\PlaylistManager.DAL.dll
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DAL\obj\Debug\net8.0\PlaylistManager.DAL.pdb
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DAL\obj\Debug\net8.0\ref\PlaylistManager.DAL.dll
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DAL\obj\Debug\net8.0\PlaylistManager.DAL.sourcelink.json

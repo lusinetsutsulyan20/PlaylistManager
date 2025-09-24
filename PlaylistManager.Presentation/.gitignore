@@ -1,6 +1,17 @@
-﻿namespace PlaylistManager.Presentation
-{
-    public class _
-    {
-    }
-}
+﻿# Build results
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# Others
+*.targets
+*.sourcelink.json
