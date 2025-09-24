@@ -18,8 +18,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "playlist",
-        "Type": "Core.Models.Playlist",
+        "Name": "dto",
+        "Type": "PlaylistManager.Shared.PlaylistCreateDto",
         "IsRequired": true
       }
     ],
@@ -55,8 +55,8 @@
         "IsRequired": true
       },
       {
-        "Name": "playlist",
-        "Type": "Core.Models.Playlist",
+        "Name": "dto",
+        "Type": "PlaylistManager.Shared.PlaylistUpdateDto",
         "IsRequired": true
       }
     ],
@@ -103,7 +103,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "playlistSong",
+        "Name": "dto",
         "Type": "Core.Models.PlaylistSong",
         "IsRequired": true
       }
@@ -145,8 +145,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "song",
-        "Type": "Core.Models.Song",
+        "Name": "dto",
+        "Type": "PlaylistManager.Shared.SongCreateDto",
         "IsRequired": true
       }
     ],
@@ -182,8 +182,8 @@
         "IsRequired": true
       },
       {
-        "Name": "song",
-        "Type": "Core.Models.Song",
+        "Name": "dto",
+        "Type": "PlaylistManager.Shared.SongUpdateDto",
         "IsRequired": true
       }
     ],
@@ -240,8 +240,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "Core.Models.User",
+        "Name": "dto",
+        "Type": "PlaylistManager.Shared.UserCreateDto",
         "IsRequired": true
       }
     ],
@@ -277,8 +277,8 @@
         "IsRequired": true
       },
       {
-        "Name": "user",
-        "Type": "Core.Models.User",
+        "Name": "dto",
+        "Type": "PlaylistManager.Shared.UserUpdateDto",
         "IsRequired": true
       }
     ],

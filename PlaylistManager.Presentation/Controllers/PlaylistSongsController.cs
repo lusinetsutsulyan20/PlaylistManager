@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Core.Models;
 using Service.Interfaces;
+using PlaylistManager.Shared;
 using System.Threading.Tasks;
 
 namespace PlaylistManager.Presentation.Controllers
@@ -24,10 +25,11 @@ namespace PlaylistManager.Presentation.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add([FromBody] PlaylistSong playlistSong)
+        public async Task<IActionResult> Add([FromBody] PlaylistSong dto)
         {
-            await _service.AddPlaylistSongAsync(playlistSong);
-            return Ok(playlistSong);
+            // Optional: validate PlaylistId and SongId exist before adding
+            await _service.AddPlaylistSongAsync(dto);
+            return Ok(dto);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Core.Models;
 using Service.Interfaces;
+using PlaylistManager.Shared;
 using System.Threading.Tasks;
 
 namespace PlaylistManager.Presentation.Controllers
@@ -19,7 +20,7 @@ namespace PlaylistManager.Presentation.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var songs = await _songService.GetAllAsync(); // Add GetAllAsync in service
+            var songs = await _songService.GetAllAsync();
             return Ok(songs);
         }
 
@@ -39,16 +40,29 @@ namespace PlaylistManager.Presentation.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] Song song)
+        public async Task<IActionResult> Create([FromBody] SongCreateDto dto)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            var song = new Song
+            {
+                Title = dto.Title,
+                Artist = dto.Artist
+            };
+
             await _songService.AddSongAsync(song);
             return CreatedAtAction(nameof(GetById), new { id = song.Id }, song);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] Song song)
+        public async Task<IActionResult> Update(int id, [FromBody] SongUpdateDto dto)
         {
-            if (id != song.Id) return BadRequest();
+            var song = await _songService.GetSongByIdAsync(id);
+            if (song == null) return NotFound();
+
+            song.Title = dto.Title;
+            song.Artist = dto.Artist;
+
             await _songService.UpdateSongAsync(song);
             return NoContent();
         }
@@ -61,4 +75,3 @@ namespace PlaylistManager.Presentation.Controllers
         }
     }
 }
-

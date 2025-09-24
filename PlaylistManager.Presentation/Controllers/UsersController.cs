@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Core.Models;
 using Service.Interfaces;
+using PlaylistManager.Shared;
 using System.Threading.Tasks;
 
 namespace PlaylistManager.Presentation.Controllers
@@ -19,7 +20,7 @@ namespace PlaylistManager.Presentation.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var users = await _userService.GetAllAsync(); // Add GetAllAsync in service
+            var users = await _userService.GetAllAsync();
             return Ok(users);
         }
 
@@ -32,16 +33,29 @@ namespace PlaylistManager.Presentation.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] User user)
+        public async Task<IActionResult> Create([FromBody] UserCreateDto dto)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            var user = new User
+            {
+                Name = dto.Username,
+                Email = dto.Email
+            };
+
             await _userService.AddUserAsync(user);
             return CreatedAtAction(nameof(GetById), new { id = user.Id }, user);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] User user)
+        public async Task<IActionResult> Update(int id, [FromBody] UserUpdateDto dto)
         {
-            if (id != user.Id) return BadRequest();
+            var user = await _userService.GetUserByIdAsync(id);
+            if (user == null) return NotFound();
+
+            user.Name = dto.Username;
+            user.Email = dto.Email;
+
             await _userService.UpdateUserAsync(user);
             return NoContent();
         }

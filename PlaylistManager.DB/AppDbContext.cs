@@ -16,7 +16,7 @@ namespace PlaylistManager.DB
         {
             base.OnModelCreating(modelBuilder);
 
-            // Composite key for PlaylistSong
+            // PlaylistSong composite key
             modelBuilder.Entity<PlaylistSong>()
                 .HasKey(ps => new { ps.PlaylistId, ps.SongId });
 
@@ -27,8 +27,14 @@ namespace PlaylistManager.DB
 
             modelBuilder.Entity<PlaylistSong>()
                 .HasOne(ps => ps.Song)
-                .WithMany(s => s.PlaylistSongs)
+                .WithMany(s => s.PlaylistSongs) // <-- make sure Song class has List<PlaylistSong> PlaylistSongs
                 .HasForeignKey(ps => ps.SongId);
+
+            // Playlist -> User
+            modelBuilder.Entity<Playlist>()
+                .HasOne(p => p.User)
+                .WithMany(u => u.Playlists)
+                .HasForeignKey(p => p.UserId);
         }
     }
 }

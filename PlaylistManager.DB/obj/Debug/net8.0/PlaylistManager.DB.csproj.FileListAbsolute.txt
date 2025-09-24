@@ -28,10 +28,10 @@ C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\Play
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\PlaylistManager.DB.AssemblyInfoInputs.cache
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\PlaylistManager.DB.AssemblyInfo.cs
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\PlaylistManager.DB.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\PlaylistManager.DB.sourcelink.json
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\Playlist.ECFF06B7.Up2Date
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\PlaylistManager.DB.dll
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\refint\PlaylistManager.DB.dll
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\PlaylistManager.DB.pdb
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\PlaylistManager.DB.genruntimeconfig.cache
 C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\ref\PlaylistManager.DB.dll
-C:\Users\Admin\Desktop\Exam Application\PlaylistManager.DB\obj\Debug\net8.0\PlaylistManager.DB.sourcelink.json

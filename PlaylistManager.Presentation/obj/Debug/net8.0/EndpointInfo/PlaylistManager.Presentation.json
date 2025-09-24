@@ -24,17 +24,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Playlist"
+                "$ref": "#/components/schemas/PlaylistCreateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Playlist"
+                "$ref": "#/components/schemas/PlaylistCreateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Playlist"
+                "$ref": "#/components/schemas/PlaylistCreateDto"
               }
             }
           }
@@ -87,17 +87,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Playlist"
+                "$ref": "#/components/schemas/PlaylistUpdateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Playlist"
+                "$ref": "#/components/schemas/PlaylistUpdateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Playlist"
+                "$ref": "#/components/schemas/PlaylistUpdateDto"
               }
             }
           }
@@ -226,17 +226,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Song"
+                "$ref": "#/components/schemas/SongCreateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Song"
+                "$ref": "#/components/schemas/SongCreateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Song"
+                "$ref": "#/components/schemas/SongCreateDto"
               }
             }
           }
@@ -289,17 +289,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Song"
+                "$ref": "#/components/schemas/SongUpdateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Song"
+                "$ref": "#/components/schemas/SongUpdateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Song"
+                "$ref": "#/components/schemas/SongUpdateDto"
               }
             }
           }
@@ -373,17 +373,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UserCreateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UserCreateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UserCreateDto"
               }
             }
           }
@@ -436,17 +436,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UserUpdateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UserUpdateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UserUpdateDto"
               }
             }
           }
@@ -510,6 +510,28 @@
         },
         "additionalProperties": false
       },
+      "PlaylistCreateDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "songIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "PlaylistSong": {
         "type": "object",
         "properties": {
@@ -526,6 +548,24 @@
           },
           "song": {
             "$ref": "#/components/schemas/Song"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PlaylistUpdateDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "songIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -555,6 +595,34 @@
         },
         "additionalProperties": false
       },
+      "SongCreateDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "artist": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SongUpdateDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "artist": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "User": {
         "type": "object",
         "properties": {
@@ -575,6 +643,34 @@
             "items": {
               "$ref": "#/components/schemas/Playlist"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserCreateDto": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserUpdateDto": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
             "nullable": true
           }
         },

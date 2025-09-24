@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Core.Models;
 using Service.Interfaces;
+using PlaylistManager.Shared;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace PlaylistManager.Presentation.Controllers
@@ -10,16 +12,23 @@ namespace PlaylistManager.Presentation.Controllers
     public class PlaylistsController : ControllerBase
     {
         private readonly IPlaylistService _playlistService;
+        private readonly IUserService _userService;
+        private readonly ISongService _songService;
 
-        public PlaylistsController(IPlaylistService playlistService)
+        public PlaylistsController(
+            IPlaylistService playlistService,
+            IUserService userService,
+            ISongService songService)
         {
             _playlistService = playlistService;
+            _userService = userService;
+            _songService = songService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var playlists = await _playlistService.GetAllAsync(); // Add GetAllAsync in service
+            var playlists = await _playlistService.GetAllAsync();
             return Ok(playlists);
         }
 
@@ -40,16 +49,49 @@ namespace PlaylistManager.Presentation.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] Playlist playlist)
+        public async Task<IActionResult> Create([FromBody] PlaylistCreateDto dto)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            // Validate User
+            var user = await _userService.GetUserByIdAsync(dto.UserId);
+            if (user == null) return BadRequest($"User with Id {dto.UserId} not found.");
+
+            // Validate Songs
+            var validSongIds = (await _songService.GetAllAsync()).Select(s => s.Id).ToHashSet();
+            var invalidSongs = dto.SongIds.Where(id => !validSongIds.Contains(id)).ToList();
+            if (invalidSongs.Any())
+                return BadRequest($"Invalid SongIds: {string.Join(", ", invalidSongs)}");
+
+            var playlist = new Playlist
+            {
+                Name = dto.Name,
+                UserId = dto.UserId,
+                PlaylistSongs = dto.SongIds.Select(sid => new PlaylistSong { SongId = sid }).ToList()
+            };
+
             await _playlistService.AddPlaylistAsync(playlist);
             return CreatedAtAction(nameof(GetById), new { id = playlist.Id }, playlist);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] Playlist playlist)
+        public async Task<IActionResult> Update(int id, [FromBody] PlaylistUpdateDto dto)
         {
-            if (id != playlist.Id) return BadRequest();
+            var playlist = await _playlistService.GetPlaylistByIdAsync(id);
+            if (playlist == null) return NotFound();
+
+            playlist.Name = dto.Name;
+
+            if (dto.SongIds != null)
+            {
+                var validSongIds = (await _songService.GetAllAsync()).Select(s => s.Id).ToHashSet();
+                var invalidSongs = dto.SongIds.Where(sid => !validSongIds.Contains(sid)).ToList();
+                if (invalidSongs.Any())
+                    return BadRequest($"Invalid SongIds: {string.Join(", ", invalidSongs)}");
+
+                playlist.PlaylistSongs = dto.SongIds.Select(sid => new PlaylistSong { SongId = sid, PlaylistId = id }).ToList();
+            }
+
             await _playlistService.UpdatePlaylistAsync(playlist);
             return NoContent();
         }
